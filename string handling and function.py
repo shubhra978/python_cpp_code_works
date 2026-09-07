@@ -38,3 +38,17 @@ for vowel in vowels:
             count+=1
 
 print(count)
+
+
+#palindrome
+def isPalindrome(phrase):
+  phrase=phrase.replace(" ","")
+  phrase=phrase.replace(".","")
+  phrase=phrase.replace("!","")
+  phrase = phrase.lower()
+  phrase=list(phrase)
+  reverse_phrase = phrase[::-1]
+  if(phrase == reverse_phrase):
+    return True
+    
+  return False
