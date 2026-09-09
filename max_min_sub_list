@@ -1,0 +1,23 @@
+#We have a list of lists that contains several numbers. I want you to print the list whose sum of elements is the highest and also the lowest.
+
+
+num_list = [[2, 8, 11], [4, 5, 7, 12], [8, 9, 10, 11], [19, 13, 7], [2, 5, 16]]
+
+new_list = []
+for items in num_list:
+    result = 0 #keeping result value as 0 for iterating each row of the list
+    for inner_items in items:
+        result = result + inner_items # adding all items in sublist
+        
+    new_list.append(result)
+    
+for index,items in enumerate(new_list): #getting the index for each sum of the sub_list
+    print(index,items)
+    
+max_index = new_list.index(max(new_list)) #pulling out the index for the max value
+min_index = new_list.index(min(new_list))   #pulling out the index for the min value
+
+
+print(f"list with max_sum =  {num_list[max_index]}")
+
+print(f"list with max_sum =  {num_list[min_index]}")
