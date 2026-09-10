@@ -12,13 +12,16 @@ def item_iter(i):
     
     print(f"my value is {i} and time taken is {wait}")
 
-#run the function within a loop
+#run the function within a loop [this will be delayed as per sleep time]
 for items in my_list:
     
     item_iter(items)
 
-#using ThreadPoolExecutor to run the items of the list concurrently
+#using ThreadPoolExecutor to run the items of the list concurrently without any delay
 
 with ThreadPoolExecutor(max_workers=len(my_list)) as executor: #maxworker will work for all the items as per length
 
-    futures = executor.map(item_iter.my_list) #now executor will map all the items as per the function and run concurrently
+    futures = executor.map(item_iter,my_list) #now executor will map all the items as per the function and run concurrently
+    
+    
+    
