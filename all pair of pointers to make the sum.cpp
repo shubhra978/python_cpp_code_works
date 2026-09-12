@@ -1,7 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-
 vector <pair<int,int>> find_pair(vector <int> &list_pair, int target){
     vector <pair<int,int>> result;
     int left=0;
