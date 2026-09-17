@@ -23,4 +23,14 @@ def num_series(target):
         num_series(target)
 num_series(5)
 
+#recursion to print from n - 1
+def num_series(target):
+    if(target == 0): #base function
+        return
+    else:
+        print(target)
+        num_series(target-1)
+        
+num_series(5)
+
 
