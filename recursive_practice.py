@@ -32,5 +32,16 @@ def num_series(target):
         num_series(target-1)
         
 num_series(5)
+#alternate
+def n_to_i (i,inp):
+    if(i<1):
+        return
+    print(i)
+    n_to_i(i-1,inp)
+user_inp = int(input())
+iteration = user_inp
+n_to_i(iteration,user_inp)
+
+    
 
 
