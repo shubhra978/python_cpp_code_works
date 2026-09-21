@@ -33,3 +33,14 @@ result = []
 result = heights[-3:] #storing it in a different list
 print(result[::-1]) #printing the result
 
+# cook your dish here
+list1 = [10, 20, 10, 30, 10, 40, 50]
+target = 10
+list2 = set(list1)
+count = 0
+for items in list1:
+    if(items == target):
+        count+=1
+print(count)
+print(len(list1)-len(list2)+1)
+print(list1)
