@@ -62,3 +62,19 @@ if __name__ == '__main__':
     print(any(item.islower() for item in s))
     print(any(item.isupper() for item in s))
 
+# print the following values for each integer  from  to :
+
+def print_formatted(number):
+
+        # 1. Find the width of the binary string of the highest number
+    width = len(bin(number)[2:])
+    
+    # 2. Loop from 1 to the given number
+    for i in range(1, number + 1):
+        # 3. Use the dynamic width variable inside the f-string format
+        print(f"{i:{width}d} {i:{width}o} {i:{width}X} {i:{width}b}")
+        
+if __name__ == '__main__':
+    n = int(input())
+    print_formatted(n)
+
