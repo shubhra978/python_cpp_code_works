@@ -18,3 +18,21 @@ list_2 = [11, 9, 43, 22, 55]
 
 for i in range(0,len(list_1)):
     print(list_1[i],list_2[len(list_2)-1-i], end=" ")
+
+#"We have a set that contains roll numbers of candidates who have applied for an event. Out of the applied candidates, few have submitted their application forms, and we have registered their details in a dictionary given below. Print the roll numbers of the candidates who have submitted their application forms and also the ones who are yet to submit it.\n",
+     #   "roll_numbers = {12, 7, 15, 23, 32, 30}\n",
+  #  "<br>student_details = {12:'Judy', 30:'Shane', 23:'Aaron'}\n",
+
+roll_numbers = {12, 7, 15, 23, 32, 30}
+student_details = {12:'Judy', 30:'Shane', 23:'Aaron'}
+
+c_app =[]
+pa_app = []
+for items in roll_numbers:
+    if items in student_details:
+        c_app.append(items)
+    else:
+        pa_app.append(items)
+        
+print("completed application", sorted(c_app))
+print("pending application",(pa_app))
